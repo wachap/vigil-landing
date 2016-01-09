@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>geolocalizacion</title>
+</head>
+<body>
+	<input type="text" id="cordenadax" >
+	<input type="text" id="cordenaday" >
+	<input type="button" onclick="localizar()" value="Localizar">
+	<div id="map" style="width: 500px; height:400px"></div>
+	
+	<script src="http://maps.google.com/maps/api/js?sensor=false" ></script>
+	
+	<script type="text/javascript">
+	var map;
+	var marker;
+	function localizar()
+	{
+		navigator.geolocation.watchPosition(showPosition);
+	}
+	function showPosition(position)
+	{
+		document.getElementById("cordenadax").value = position.coords.latitude;
+		document.getElementById("cordenaday").value = position.coords.longitude;
+	}
+	function init()
+	{	
+		var cordenadax = document.getElementById("cordenadax").value;
+		var cordenaday = document.getElementById("cordenaday").value;
+
+		var image = new google.maps.MarkerImage
+		(
+			'http://www.crisservis.com/images/puertavigil.jpg',
+			new google.maps.Size(30,28)
+		);
+		var mapOptions = 
+		{
+			center: new google.maps.LatLng(cordenadax,cordenaday),
+			zoom: 15,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		map = new google.maps.Map(document.getElementById("map"),mapOptions);
+		
+		var place = new google.maps.LatLng(cordenadax,cordenaday);
+		marker = new google.maps.Marker
+		({
+			position: place,
+			title: "I.E.S.T.P. Francisco de Paula Gonzales Vigil",
+			map: map
+			//icon: image
+		});
+		google.maps.event.addListener(marker,"click",showInfo);
+	}
+	function showInfo()
+	{
+		map.setZoom(16)
+	}
+	</script>
+</body>
+</html>

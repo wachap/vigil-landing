@@ -1,0 +1,1246 @@
+gris = #E9E9E9
+azul = #062C50
+naranja = #FF5A00
+amarillo = #FFB400
+
+@import 'nib/vendor'
+@import 'style.styl'
+
+@font-face {
+  font-family: "Open-Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Open-Sans-Bold.woff") format("woff");
+} 
+
+@font-face {
+  font-family: "Open-Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Open-Sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/oswald.woff') format('woff');
+}
+
+h3
+h2
+	font-family oswald
+
+*::selection
+	color white
+	background none repeat scroll 0% 0% #58B1FC//#B0B0B0
+
+*::-moz-selection
+	color white
+	background none repeat scroll 0% 0% #58B1FC//#B0B0B0
+
+
+body
+	//background rgba(#FFC43A, .75)
+	//background radial-gradient(left, circle, #FCFAAB 0%,#FFC43A 200%)
+	//background #222222
+	margin 0
+	background gris
+	//background linear-gradient(bottom, #FE9400, #FFB400, #FE9400)
+	//background radial-gradient(center, circle, #FF4800 0%,rgba(255, 180, 0, 0.82)  90%)
+	//background radial-gradient(center, circle, white 0%,rgba(255, 180, 0, 0.82)  90%)
+	//background radial-gradient(center, circle, rgba(255, 180, 0, 0.82) 0%,#FF4800 90%)
+	font-size 16px	
+	
+	.wrapper-error
+		margin 0
+		padding 4em
+		text-align center
+		background: url('http://mejorando.la/static/images/error/left-404.jpg') no-repeat scroll left center, url('http://mejorando.la/static/images/error/right-404.jpg') no-repeat scroll right center, none repeat scroll 0% 0% #008FD5;
+		.error_page
+			margin 7%
+			color #FFF
+			text-transform uppercase
+			font-family 'Open-Sans'
+			font-size 16px
+			h1
+				font-size 80px
+				font-weight normal
+				letter-spacing -3px
+				margin 0
+				strong
+					font-weight bold
+			h2
+				font-family arial
+				margin 0
+				font-weight bold
+				font-size 16px
+header
+	
+	//background linear-gradient(bottom, #E9E9E9, gray)
+	//background-image url('../img/footer3.jpg')	
+	//background-size 174px
+	//background-position center top
+	
+	//padding 0 5% 0 5%
+	//margin 0 auto
+	text-align center	
+	position relative//absolute
+	z-index 100
+	right 0
+	
+	h2
+		width 0
+		height 0
+		overflow hidden
+		position absolute
+	.logo-vigil
+		background #E9E9E9
+		position absolute
+		z-index 100
+		margin-left 5%
+		&:after
+			content ""
+			border-top 20px solid #E9E9E9
+			border-right 78px solid transparent
+			border-left 78px solid transparent
+			top 100%
+			left 0		
+			position absolute
+			z-index 98
+		&:before
+			content ""
+			border-top 25px solid #D9D9D9
+			border-right 78px solid transparent
+			border-left 78px solid transparent
+			top 100%
+			left 0		
+			position absolute
+			z-index 97
+		a			
+			img
+				width 156px
+				
+	.logo	
+		margin-right 5%
+		background #FAE300
+		position absolute		
+		z-index 100
+		right 0
+		//float left
+		&:after
+			content ""
+			border-bottom 20px solid transparent
+			border-right 67px solid #FAE300
+			border-left 68px solid #FAE300
+			top 100%
+			left 0		
+			position absolute
+		&:before
+			content ""
+			border-bottom 25px solid transparent
+			border-right 67px solid #EAD300
+			border-left 68px solid #EAD300
+			top 100%
+			left 0		
+			position absolute
+		a		
+			
+			img
+				//float left				
+				transition all 0.5s ease
+				border-radius 50%
+				&:hover
+					transform rotate(360deg)
+			
+	/*.direccion
+		display none		
+		float right
+		margin 54px 0 0 0		
+		//color rgba(black, .5)
+		color #000000
+		font-family calibri
+		a
+			float right
+			color rgba(#000000, .5)			
+			text-decoration none
+			&:hover
+				text-decoration underline
+		a
+		p			
+			font-weight 600
+			display block
+			margin 0
+			text-align right*/
+nav
+	.menu
+		//background #FF980B
+		background #222222
+		padding 5px 0 5px 0
+		margin 0
+		text-align center
+		box-shadow 0 5px 15px rgba(#222222, 0.5)//(rgba(#FFB400, 0.1) 0.4)
+		position relative
+		z-index 6
+		//box-shadow 0 0 0 rgba(rgba(255, 180, 0, 0.82) 0.5)		
+		li
+			display inline-block
+			position relative
+			transition all 0.3s ease
+			border-radius 5px 5px 0 0
+			//z-index 0
+			&:hover
+				background #FAE300
+				a
+					color #47292B					
+			/*
+			.flecha				
+				cursor pointer
+				&:after
+					transition all .3s ease
+					border-left 37.5px solid transparent
+					border-right 37.5px solid transparent
+					border-top 15px solid #D8BD24
+					top 80%
+					left 0
+					content ""
+					position absolute
+					opacity 0
+					z-index 10
+				&:hover
+					&:after
+						top 100%
+						opacity 1
+			*/
+			a
+				font-family oswald
+				padding 15px 10px 15px 10px
+				display block
+				text-transform uppercase
+				text-decoration none
+
+				//color #47292B
+				color white
+				font-weight 600				
+			/*
+			.submenu
+				padding 0
+				position absolute
+				top 100%
+				z-index 10
+				display none
+				background #FAE300
+				width 150px
+				li
+					display block
+					text-align left
+					border-bottom 1px solid rgba(white, .5)
+					&:hover
+						background #222222
+					a
+						font-size 0.9em
+						
+						&:hover
+							color white
+
+				.subsubmenu
+					display none
+			*/
+
+/*.carreras
+	width 90%
+	margin 3em auto
+	text-align center
+	h2
+		text-align left
+		color gray
+	ul
+		padding 0
+		li
+			background #FFC43A
+			
+			display inline-block
+			width 236px
+			vertical-align top
+			margin 0 1% 2% 1%
+			div				
+				.hover					
+					color #707070
+					text-decoration none
+					display block
+					padding 10px 10px
+					border-bottom 5px solid #F39C12
+					transition all 0.5s ease
+					&:hover
+						background #F39C12
+						border-bottom 5px solid #FFC43A
+						//box-shadow 0 0 20px rgba(white, 0.8)
+						h3
+						p
+							color white
+					h3
+						margin 0 0 20px 0
+						color #676767
+						text-transform uppercase
+					p
+						margin 16px 0 0 0	
+						color #676767
+						font-size 0.9em
+*/
+.noticias //de index
+	width 90%
+	margin 3em auto
+	text-align center
+	.encabezado
+		background gris
+		.tit-principal
+			text-align left
+			text-transform uppercase
+			line-height 28px
+			margin 0 0 25px 0
+			padding 15px 18px
+			word-spacing 5px
+			display block
+			background #FAE300
+			width 50%
+			font-weight 300
+			color #47292B
+			position relative
+			&:after				
+				border-right 30px solid transparent
+				border-top 58px solid #FAE300
+				top 0
+				right -0px
+				content ""
+				position absolute	
+			&:before				
+				border-left 5px solid amarillo
+				border-right 30px solid gris
+				border-top 58px solid amarillo
+				top 0
+				right -5px
+				content ""
+				position absolute	
+	.noticia
+		background white
+		display inline-block
+		width 220px
+		vertical-align top
+		position relative
+		margin 0 1% 2% 1%	
+		cursor pointer	
+		.imgnot
+			width 220px
+			height 165px
+		.item-info
+			transition all 0.5s ease
+			top 0
+			position absolute
+			height 185px
+			padding 16px 10px
+			text-align left
+			color #222222
+			opacity 0
+			&:hover
+				background #FAE300//#FFB400
+				opacity 1
+				//box-shadow 0 0 20px rgba(white, 0.8)
+			h3
+				margin 20px 0 20px 0
+				a
+					text-decoration none
+					color #222222//#47292B
+					&:hover
+						text-decoration underline
+			p
+				margin 0
+				font-size 13px
+		footer
+			padding 9px 10px
+			p
+				font-family oswald
+				font-size 1.17em
+				margin 0
+				text-align left				
+				font-weight 100
+				color #B26500
+
+	
+.content-noticias
+	width 90%
+	margin 3.5em auto 1.5em auto
+	position relative
+	
+	.encabezado
+		background gris
+		.tit-principal
+			text-transform uppercase
+			line-height 28px
+			margin 0 0 25px 0
+			padding 15px 18px
+			word-spacing 5px
+			display block
+			background #FAE300
+			width 50%
+			font-weight 300
+			color #47292B
+			position relative
+			&:after				
+				border-right 30px solid transparent
+				border-top 58px solid #FAE300
+				top 0
+				right -0px
+				content ""
+				position absolute	
+			&:before				
+				border-left 5px solid amarillo
+				border-right 30px solid gris
+				border-top 58px solid amarillo
+				top 0
+				right -5px
+				content ""
+				position absolute		
+	.posts		
+		.post
+			overflow hidden
+			border-bottom 2px solid white
+			margin 0px auto 40px auto
+			padding 0px 0px 40px
+			.post-info
+				float left
+				width 100px
+				div
+					width 65px
+					z-index 9
+					text-align center
+					text-transform uppercase
+					font-weight bold
+				.date
+					color #47292B
+					padding 8px 0
+					background-color #FAE300
+					span
+						display block
+					.month
+						font-size 13px
+						line-height 11px
+					.day
+						font-size 27px
+						letter-spacing 0px
+						margin-top 2px
+						line-height 33px
+				.comments
+					height 30px
+					a
+						transition all 0.14s ease 0s
+						color #BBB
+						display block
+						cursor pointer
+						background-color #444
+						font-size 8px
+						padding 6px
+						text-decoration none
+						&:hover
+							color white
+						span
+							font-size 22px							
+							letter-spacing 0px
+							margin-top 2px
+							line-height 27px
+
+			.post-media
+				display block
+				width 270px
+				float left
+				margin-right 30px
+				margin-bottom 0px
+				transition all 0.5s ease
+				a
+					img
+						max-width 100%						
+			.post-content
+				float left
+				width 65%//808px
+				.post-title
+					display block
+					.title
+						margin 0						
+						font-size 22px
+						line-height 28px
+						font-weight 500
+						text-transform uppercase
+						word-spacing 5px
+						a
+							transition all 0.14s ease 0s
+							text-decoration none
+							color #676767
+							&:hover
+								color #00B8CE
+				.post-meta
+					display block
+					span
+						color #AAA
+					ul
+						margin 5px 0px 15px
+						padding 0px
+						list-style none outside none
+						font-size 11px
+						text-transform uppercase
+						li
+							margin 0
+							display inline
+							color #676767
+				p
+					text-align justify
+					color #676767
+					font-size 13px
+					margin-bottom 14px
+					&:last-child
+						margin-bottom 0
+					a
+						color #00B8CE
+						transition all 0.14s ease 0s
+						text-decoration none
+						font-size 13px
+						&:hover
+							color #444444
+		.comentarios
+			.title
+				color #676767
+				font-size 22px
+				font-family oswald
+				margin 0
+			span
+				font-size 13px
+				color #676767
+				display block				
+				margin 0 0 20px 0
+			.comentario
+				label
+					display block
+					font-family verdana
+					color #676767
+					font-size 13px
+				
+					
+				input
+					width 500px
+					margin-bottom 15px
+					height 25px
+				textarea
+					margin-bottom 15px
+					width 600px
+			#btnenviar
+				background #FAE300
+				border-radius 5px
+				border none
+				padding 5px 10px
+.contacto
+	width 90%
+	margin 3.5em auto 1.5em auto	
+	.encabezado
+		background gris
+		.tit-principal
+			text-transform uppercase
+			font-weight 300			
+			background #FAE300
+			width 50%
+			//font-size 22px
+			margin 0 0 25px 0
+			color #47292B
+			padding 15px 18px
+			position relative
+			line-height 28px
+			display block
+			word-spacing 5px
+			&:after				
+				border-right 30px solid transparent
+				border-top 58px solid #FAE300
+				top 0
+				right -0px
+				content ""
+				position absolute	
+			&:before				
+				border-left 5px solid amarillo
+				border-right 30px solid gris
+				border-top 58px solid amarillo
+				top 0
+				right -5px
+				content ""
+				position absolute	
+	.one
+		text-align center
+		.one-half
+			display inline-block
+			vertical-align top
+		.uno
+			margin-right 4%
+			.iframe
+				width 461px
+				height 365px
+				background #222222
+				margin-bottom 16px
+			.direccion		
+				color #222222
+				font-family calibri
+				a
+					color #00B8CE
+					text-decoration none
+					&:hover
+						text-decoration underline
+				a
+				p	
+					display block
+					margin 0
+					text-align left
+		.dos
+			text-align left
+			.title
+				margin 0 0 16px 0
+				font-family oswald
+				font-size 22px
+				color #676767
+			.iphorm
+				label
+					display block 	
+					font-weight bold
+					font-size 13px
+					margin 1em 0 1em 0
+					color #676767
+				input
+					border 1px solid #CACACA 
+					padding  8px 10px
+					font-size 13px
+				.asunto
+					select
+						padding 5px 8px 
+						font-size 13px
+						
+				.mensaje
+					textarea
+						font-size 13px
+						width 197px 
+
+				.submit
+					margin 13px 0
+					button
+						border 1px solid #CACACA 
+						padding 4px 12px
+						border-radius 4px	
+
+.tabs
+	width 90%
+	margin 1.5em auto 1.5em auto
+	position relative
+	.encabezado
+		background gris
+		.tit-principal
+			text-transform uppercase
+			font-weight 300			
+			background #FAE300
+			width 50%
+			//font-size 22px
+			margin 0 0 25px 0
+			color #47292B
+			padding 15px 18px
+			position relative
+			line-height 28px
+			display block
+			word-spacing 5px
+			&:after				
+				border-right 30px solid transparent
+				border-top 58px solid #FAE300
+				top 0
+				right -0px
+				content ""
+				position absolute	
+			&:before				
+				border-left 5px solid amarillo
+				border-right 30px solid gris
+				border-top 58px solid amarillo
+				top 0
+				right -5px
+				content ""
+				position absolute	
+	.galeria-inicio
+		width 230px
+		height 200px
+		background #222222
+		position absolute
+		right 0
+		bottom 0
+		opacity  0 
+		
+
+	.content		
+		//background white
+		position relative
+		z-index 5
+		height 500px
+		width 70%
+		overflow-x auto		
+		border-radius 10px		
+		div			
+			position absolute
+			top 0
+			right 0
+			z-index 1			
+			opacity 0
+			transition all linear 0.5s
+			transform translateY(-500px)
+			
+			h3
+			h4
+			h5
+				font-weight 300
+				font-family oswald 
+			h3
+				color #47292B
+				margin 0
+				padding 16px 13px 16px 13px
+				font-size 21px
+				text-transform uppercase
+			h4				
+				color #47292B
+				margin 0
+				padding 0 13px 16px 13px
+				font-size 19px
+			h5
+				color #222222
+				margin 0
+				padding 0 13px 16px 13px
+				font-size 16px 
+			
+			p
+				text-align justify
+				margin 0
+				padding 0 1em 1em 1em
+				color #676767//006ABB
+				font-family Helvetica
+				font-size 13px
+			
+			ul
+				padding 0
+				margin 0
+				li
+					padding 0 1em 0 1em
+					color #676767
+					font-size 13px
+					&:before
+						content "- "
+					&:last-of-type
+			 			padding-bottom 16px
+			ol				
+				margin 0
+				color #676767
+				li
+					font-size 13px
+					&:last-of-type
+			 			padding-bottom 16px
+			 		a
+			 			color #676767
+			.dude
+				opacity 0
+		.horario-img
+			background black
+			position static
+			width 200px
+			img
+				width 300px
+		.lista
+			padding 0
+			text-align center
+			.objeto2
+				vertical-align top
+				display inline-block
+				cursor pointer
+				.computacion
+					padding  0
+					margin  0  
+					width 398px
+					transition all 0.3s ease
+					&:hover
+						transform scale(1.1) 
+			.objeto
+				text-decoration none
+				display inline-block
+				margin 0 2.5% 2% 2.5%
+				position relative
+				span
+					color #2F2F2F	
+				.retrato
+					display block
+					border-radius 50%
+					background #222222
+					padding 5px
+					border 5px solid #FAE300
+					position relative
+					transition all 0.3s ease-out
+					margin-bottom 1em
+					cursor pointer
+					&:hover
+						box-shadow 0 0 0 15px rgba(#222222, 1)
+			
+				.name
+					display block
+					font-weight 800
+					font-size 16px
+				.curso
+					font-size 15px
+					display block
+				.horario
+					font-size 14px
+					//text-transform uppercase
+					a
+						color #22BCE0
+						text-decoration none
+						&:hover
+							text-decoration underline
+	
+	input
+		position absolute
+		display none
+		z-index 1000
+
+		&:checked + label
+				background #FAE300
+				z-index 6		
+				color #47292B
+				width 200px		
+
+				&:after
+					content ""
+					border-right 20px solid #D8BD24//#F39C12
+					border-bottom 26px solid transparent
+					top 100% + 3px
+					left 0
+					position absolute
+					z-index -1
+
+
+		//&:hover + label
+		//	background amarillo
+	label	
+		transition width 0.5s ease
+		cursor pointer
+		color white
+		font-family oswald
+		font-weight 600
+		font-size 1.3em
+		background #222222
+		border-bottom 2px solid #E9E9E9//rgba(white, .9)
+		display block
+		padding 10px 15px
+		text-transform uppercase
+		position relative
+		width 180px
+		float right
+		clear both		
+		&:hover
+			background amarillo
+			color #222222
+		&:first-of-type
+			 z-index 10
+	.tab-label-2 
+		z-index 9
+	.tab-label-3 
+		z-index 8
+	.tab-label-4 
+		z-index 7
+	.tab-label-5
+		z-index 6
+	.tab-label-6	
+		z-index 6
+	.tab-label-7
+		z-index 6
+
+	.tab-selector-1:checked ~ .content .content-1
+	.tab-selector-2:checked ~ .content .content-2
+	.tab-selector-3:checked ~ .content .content-3
+	.tab-selector-4:checked ~ .content .content-4
+	.tab-selector-5:checked ~ .content .content-5
+	.tab-selector-6:checked ~ .content .content-6		
+	.tab-selector-7:checked ~ .content .content-7
+		transform: translateY(0px)
+		z-index: 100
+		opacity: 1
+		transition: all ease-out 0.3s 0.3s
+
+.galeria
+	width 90%
+	margin 3.5em auto 1.5em auto
+	.encabezado
+		background gris
+		.tit-principal
+			text-align left
+			text-transform uppercase
+			line-height 28px
+			margin 0 0 25px 0
+			padding 15px 18px
+			word-spacing 5px
+			display block
+			background #FAE300
+			width 50%
+			font-weight 300
+			color #47292B
+			position relative
+			&:after				
+				border-right 30px solid transparent
+				border-top 58px solid #FAE300
+				top 0
+				right -0px
+				content ""
+				position absolute	
+			&:before				
+				border-left 5px solid amarillo
+				border-right 30px solid gris
+				border-top 58px solid amarillo
+				top 0
+				right -5px
+				content ""
+				position absolute	
+	.contenedor
+		.lista
+			padding 0
+			text-align center
+			.objeto2
+				vertical-align top
+				display inline-block
+				cursor pointer
+				.computacion
+					padding  0
+					margin  0  
+					width 398px
+					transition all 0.3s ease
+					&:hover
+						transform scale(1.1) 
+			.objeto
+				text-decoration none
+				display inline-block
+				margin 0 2.5% 2% 2.5%
+				position relative
+				span
+					color #2F2F2F	
+				.retrato
+					display block
+					border-radius 50%
+					background #222222
+					padding 5px
+					border 5px solid #FAE300
+					position relative
+					transition all 0.3s ease-out
+					margin-bottom 1em
+					cursor pointer
+					&:hover
+						box-shadow 0 0 0 15px rgba(#222222, 1)
+				.nina
+					&:hover
+						box-shadow 0 0 0 15px rgba(#F597BB, 1)
+				.name
+					display block
+					font-weight 800
+					font-size 16px
+				.curso
+					font-size 15px
+					display block
+				.horario
+					font-size 14px
+					//text-transform uppercase
+					a
+						color #22BCE0
+						text-decoration none
+						&:hover
+							text-decoration underline
+
+			
+			
+.documentos
+	width 90%
+	margin 3.5em auto 1.5em auto
+	.encabezado
+		background gris
+		.tit-principal
+			text-align left
+			text-transform uppercase
+			line-height 28px
+			margin 0 0 25px 0
+			padding 15px 18px
+			word-spacing 5px
+			display block
+			background #FAE300
+			width 50%
+			font-weight 300
+			color #47292B
+			position relative
+			&:after				
+				border-right 30px solid transparent
+				border-top 58px solid #FAE300
+				top 0
+				right -0px
+				content ""
+				position absolute	
+			&:before				
+				border-left 5px solid amarillo
+				border-right 30px solid gris
+				border-top 58px solid amarillo
+				top 0
+				right -5px
+				content ""
+				position absolute	
+	.lista
+		h4
+			margin -10px 0 14px 22px
+			padding  0
+			display  block   
+			text-transform  uppercase
+			color #676767
+			font-family oswald
+		h3
+			margin -10px 0 14px 18px
+			padding  0
+			display  block   
+			text-transform  uppercase
+			color #676767
+		ol
+			text-align left
+			margin 0 40px 15px 0			
+			li				
+				padding 0.2em 0.5em
+				width 60%			
+				display inline-block
+				margin 0 0 5px 0
+				color #676767	 
+				//list-style decimal
+				//overflow visible 		
+			a
+				padding 0.2em 0.5em
+				float right
+				text-align center				
+				margin 0 0 5px 10px
+				border-radius 0.5em
+				background #22BCE0
+				color white
+				text-decoration none
+				&:hover
+					text-decoration underline
+					background #22BCE0
+			.silabo
+				width 60px
+				background #F93A3A
+			.programacion
+				background #FAE300
+				width 110px
+				color #676767
+				&:hover
+					color white	
+					
+
+
+.pie
+	padding 2.2em 0 0 0
+	//background-image url('../img/footer3.jpg')
+	//background-size 174px
+	//background-position center top
+	background #222222
+	//text-align center
+	box-shadow 0 -5px 0 rgba(rgba(#FFB400, 0.1) 0.4)
+	.footer-top
+		width 100%
+		overflow hidden	
+		margin 0 auto
+		text-align center
+		div	
+			display inline-block
+			width 211px
+			vertical-align top
+			color #FFF
+			margin 0 4%
+			h3
+				margin 0 0 18px 0
+				text-transform uppercase
+				font-size 0.9em
+				text-align left
+			p
+				font-size 0.8em
+				color rgba(white, .7)
+				text-align justify
+		
+		.one-half
+			text-align left
+			ul
+				padding 0
+				li
+					list-style none
+					a
+						text-decoration none
+						color white
+						font-size 0.8em
+						&:hover
+							color #00B8CE
+							text-decoration underline
+		.two
+
+			form
+				font-size 0.9em
+				overflow hidden
+				input
+					display block
+					padding 8px
+					margin 0 0 1em 0	
+					color #222222
+				#txbEmail
+					border 2px solid #FF5A00
+					width 191px
+					background white
+					&:focus
+						border 2px solid #00B9CE
+				.button
+					border-radius 5px 5px 5px 5px
+					border none						
+					color #222222//rgba(0, 0, 0, .75)
+					float left
+					font-weight bold
+					background #FAE300		
+					text-transform uppercase
+					border-bottom 5px solid amarillo
+					&:hover
+						background white
+						color #222222
+		.three			
+			.mas
+				margin 18px 0 18px 0
+			.social
+				ul
+					margin 0
+					padding 0
+					li
+						text-align left						
+						display block
+						
+						.facebook							
+							background url('../img/social-icons/facebook.png') no-repeat scroll 0px 0px transparent
+							background-color #FAE300//rgba(255, 90, 0, 1)
+							&:hover
+								background-position: 0px -40px
+								background-color #3B5998
+						.twitter							
+							background url('../img/social-icons/twitter.png') no-repeat scroll 0px 0px transparent
+							background-color #FAE300//rgba(255, 90, 0, 1)
+							&:hover
+								background-position: 0px -40px
+								background-color #48C4D2
+						.rss							
+							background url('../img/social-icons/rss.png') no-repeat scroll 0px 0px transparent
+							background-color #FAE300//rgba(255, 90, 0, 1)
+							&:hover
+								background-position: 0px -40px
+								background-color #FE9900
+						a
+							margin 0 1em 0 0							
+							display block
+							float left
+							width 40px
+							height 40px
+							text-indent: 9000px;		
+							transition all 0.3s ease					
+
+	.footer-bottom
+		background #FAE300
+		color #707070
+		overflow hidden
+		width 80%
+		margin 0 auto
+		margin-top 23px
+		.autor			
+			float left
+			padding 0 0 0 1em
+			p
+				font-size 0.8em
+				a
+					text-decoration none
+					color black
+					font-weight 600
+					&:hover
+						text-decoration underline			
+		.frase
+			float right	
+			padding 0 1em 0 0
+			p
+				font-size 0.8em	
+
+//SLIDER
+#titulo1
+	font-family Calibri
+	text-decoration none
+	color #384A60
+	text-shadow 2px 2px 0 rgba(white,0.5)
+#titulo2
+	font-family Calibri
+	text-decoration none
+	color #E44B3B
+.typeA
+	text-shadow 2px 2px 4px black
+	color white
+
+
+
+@media screen and (max-width: 1207px)
+		
+	.galeria
+		.contenedor
+			.lista
+				.objeto2
+					margin 0 2.5% 3% 2.5%
+
+@media screen and (max-width: 1249px)
+	.pie
+		.footer-top
+			div
+				margin 0 1%
+	.noticias
+		.noticia
+			margin 0 0 1% 0
+	.content-noticias
+		.posts
+			.post
+				.post-content
+					width 55%
+
+
+@media screen and (max-width: 1030px)	
+		
+	.galeria
+		.contenedor
+			.lista
+				.objeto2
+					margin 0 2% 3% 2%
+					
+@media screen and (max-width: 1000px)
+	.demo-2 
+		.sl-slider 
+			h2 
+				margin-top 0
+
+	.content-noticias
+		.posts
+			.post
+				.post-media
+					width 150px
+
+	header
+		.logo	
+			/*background rgba(#FAE300, .8)		*/	
+			&:after
+				border-bottom 12px solid transparent
+				border-right 50px solid #FAE300
+				border-left 50px solid #FAE300
+			&:before
+				border-bottom 16px solid transparent
+				border-right 50px solid #EAD300
+				border-left 50px solid #EAD300
+				
+					
+		
+				
+			img
+				width 100px 
